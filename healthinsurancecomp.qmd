@@ -1,0 +1,90 @@
+---
+title: "Health Insurance Comparison"
+subtitle: "Given 2 Spenders"
+format: html
+editor: visual
+---
+
+```{r, include=F}
+library(rgl)
+library(tidyverse)
+library(english)
+library(RColorBrewer)
+options(rgl.useNULL=TRUE) 
+options(echo = F)
+```
+
+```{r, echo=F}
+
+### CONFIGURE PLAN DETAILS HERE
+Plans = data.frame(
+  deductible = c(1000,4000),
+  premium = c(262.19,164.37),
+  co_ins = c(.2,0),
+  oop_max = c(6000,4000)
+)
+
+variable_cost = function(DRS, PlanRow) {
+  cost = ifelse(DRS <= PlanRow$deductible ,
+          DRS,  
+          PlanRow$deductible + (DRS - PlanRow$deductible)*PlanRow$co_ins)
+  cost = pmin(PlanRow$oop_max, cost)
+  return(cost)
+}
+
+```
+
+```{r, echo=F}
+DRS = c(250,500,750,1000,1250,1500,1750,
+        2000,2500,3250,4000,5000)
+
+spend = expand.grid("Person1" = DRS,"Person2" = DRS, "Plan" = english(c(1:nrow(Plans))))
+spend = spend %>% 
+          mutate(
+            fixed_cost =  Plans[Plan,]$premium * 12,
+            variable_cost_1 = variable_cost(Person1,Plans[Plan,]),
+            variable_cost_2 = variable_cost(Person2,Plans[Plan,]),
+            variable_cost = variable_cost_1 + variable_cost_2,
+            total_cost = variable_cost + fixed_cost
+          )
+
+```
+
+```{r, echo = F}
+mycolors <- c('royalblue1', 'orange')
+color <- mycolors[ as.numeric(spend$Plan) ]
+
+plot3d( 
+  x=spend$Person1, y=spend$Person2, z=spend$variable_cost + spend$fixed_cost, 
+  col = color,
+  type = 's', 
+  radius = 50,
+  xlab="Person 1 Deductible Related Spending", ylab="Person 2", zlab="Plan 1 Net Cost")
+rglwidget()
+```
+
+```{r, echo = F}
+spend_wide = spend %>% 
+              select(-fixed_cost, - variable_cost, 
+                     -variable_cost_1, -variable_cost_2) %>% 
+              pivot_wider(names_from = Plan, values_from = total_cost )  %>%
+              mutate(OnevTwo = two - one)
+```
+
+```{r, echo = F}
+min_diff = -max(abs(spend_wide$OnevTwo))
+max_diff = -min_diff
+spend_wide %>% ggplot(aes(x = Person1, y=Person2, 
+                          color = -as.numeric(OnevTwo), size = abs(OnevTwo),
+                          label = round(OnevTwo,0))) +
+                geom_point() + 
+                geom_text(color = "black", size = 2.5)+
+                #scale_color_distiller(palette = "Spectral") + 
+                  # Default point
+                scale_size("size_area", range = c(0, 20))+
+                scale_color_gradient2(high = "red",mid="white",low = "green", limits = c(min_diff,max_diff)) + 
+                theme_bw() + theme(legend.position = 0) +
+                labs(x = "Person 1 Deductible Related Spending",
+                     y = "Person 2 Deductible Related Spending",
+                     title = "Money Saved by Picking Plan One")
+```

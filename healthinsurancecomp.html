@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Health Insurance Comparison</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="healthinsurancecomp_files/libs/clipboard/clipboard.min.js"></script>
+<script src="healthinsurancecomp_files/libs/quarto-html/quarto.js"></script>
+<script src="healthinsurancecomp_files/libs/quarto-html/popper.min.js"></script>
+<script src="healthinsurancecomp_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="healthinsurancecomp_files/libs/quarto-html/anchor.min.js"></script>
+<link href="healthinsurancecomp_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="healthinsurancecomp_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="healthinsurancecomp_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="healthinsurancecomp_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="healthinsurancecomp_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="healthinsurancecomp_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="healthinsurancecomp_files/libs/rglWebGL-binding-1.2.1/rglWebGL.js"></script>
+<link href="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/rgl.css" rel="stylesheet">
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/rglClass.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/utils.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/buffer.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/subscenes.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/shaders.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/shadersrc.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/textures.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/projection.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/mouse.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/init.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/pieces.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/draw.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/controls.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/selection.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/rglTimer.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/pretty.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/axes.src.js"></script>
+<script src="healthinsurancecomp_files/libs/rglwidgetClass-1.2.1/animation.src.js"></script>
+<script src="healthinsurancecomp_files/libs/CanvasMatrix4-1.2.1/CanvasMatrix.src.js"></script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Health Insurance Comparison</h1>
+<p class="subtitle lead">Given 2 Spenders</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<div class="cell-output-display no-overflow-x">
+<p id="rgl44808-aria" hidden="">3D plot</p>
+<div id="rgl44808" style="width:100%;height:464px;" class="rglWebGL html-widget " aria-labelledby="rgl44808-aria"></div>
+<script type="application/json" data-for="rgl44808">{"x":{"material":{"color":"#000000","alpha":1,"lit":true,"ambient":"#000000","specular":"#FFFFFF","emission":"#000000","shininess":50,"smooth":true,"front":"filled","back":"filled","size":3,"lwd":1,"fog":true,"point_antialias":false,"line_antialias":false,"texture":null,"textype":"rgb","texmode":"modulate","texmipmap":false,"texminfilter":"linear","texmagfilter":"linear","texenvmap":false,"depth_mask":true,"depth_test":"less","isTransparent":false,"polygon_offset":[0,0],"margin":"","floating":false,"tag":"","blend":["src_alpha","one_minus_src_alpha"]},"rootSubscene":7,"objects":{"13":{"id":13,"type":"spheres","material":{},"vertices":"0","colors":"1","radii":[[50]],"centers":"2","ignoreExtent":false,"fastTransparency":true,"flags":32771},"15":{"id":15,"type":"text","material":{"lit":false,"margin":0,"floating":true,"edge":[0,1,1]},"vertices":"3","colors":"4","texts":[["Person 1 Deductible Related Spending"]],"cex":[[1]],"adj":[[0.5,0.5,0.5]],"centers":"5","family":[["sans"]],"font":[[1]],"ignoreExtent":true,"flags":33808},"16":{"id":16,"type":"text","material":{"lit":false,"margin":1,"floating":true,"edge":[1,1,1]},"vertices":"6","colors":"7","texts":[["Person 2"]],"cex":[[1]],"adj":[[0.5,0.5,0.5]],"centers":"8","family":[["sans"]],"font":[[1]],"ignoreExtent":true,"flags":33808},"17":{"id":17,"type":"text","material":{"lit":false,"margin":2,"floating":true,"edge":[1,1,1]},"vertices":"9","colors":"10","texts":[["Plan 1 Net Cost"]],"cex":[[1]],"adj":[[0.5,0.5,0.5]],"centers":"11","family":[["sans"]],"font":[[1]],"ignoreExtent":true,"flags":33808},"11":{"id":11,"type":"light","vertices":[[0,0,1]],"colors":[[1,1,1,1],[1,1,1,1],[1,1,1,1]],"viewpoint":true,"finite":false},"10":{"id":10,"type":"background","material":{},"colors":"12","centers":"13","sphere":false,"fogtype":"none","fogscale":1,"flags":32768},"12":{"id":12,"type":"background","material":{"lit":false,"back":"lines"},"colors":"14","centers":"15","sphere":false,"fogtype":"none","fogscale":1,"flags":32768},"14":{"id":14,"type":"bboxdeco","material":{"front":"lines","back":"lines"},"vertices":"16","colors":"17","axes":{"mode":["pretty","pretty","pretty"],"step":[1000,1000,2000],"nticks":[5,5,5],"marklen":[15,15,15],"expand":[1.02999997138977,1.02999997138977,1.02999997138977]},"draw_front":true,"flags":32769},"7":{"id":7,"type":"subscene","par3d":{"antialias":8,"FOV":30,"ignoreExtent":false,"listeners":7,"mouseMode":{"none":"none","left":"trackball","right":"zoom","middle":"fov","wheel":"pull"},"observer":[0,0,25061.61328125],"modelMatrix":[[1.22380208969116,0,0,-3212.48071289062],[0,0.418564975261688,0.728331923484802,-5630.7353515625],[0,-1.14999783039093,0.265091150999069,-23692.3828125],[0,0,0,1]],"projMatrix":[[3.73205089569092,0,0,0],[0,3.73205089569092,0,0],[0,0,-3.86370325088501,-90344.21875],[0,0,-1,0]],"skipRedraw":false,"userMatrix":[[1,0,0,0],[0,0.342020143325668,0.939692620785909,0],[0,-0.939692620785909,0.342020143325668,0],[0,0,0,1]],"userProjection":[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],"scale":[1.22380208969116,1.22380208969116,0.775074660778046],"viewport":{"x":0,"y":0,"width":1,"height":1},"zoom":1,"bbox":[209.14372253418,5040.8564453125,209.14372253418,5040.8564453125,2407.92993164062,10036.9501953125],"windowRect":[0,0,256,256],"family":"sans","font":1,"cex":1,"useFreeType":false,"fontname":"NULL","maxClipPlanes":2147483647,"glVersion":"NA","activeSubscene":0},"embeddings":{"viewport":"replace","projection":"replace","model":"replace","mouse":"replace"},"objects":[12,14,13,15,16,17,11],"subscenes":[],"flags":34067}},"crosstalk":{"key":[],"group":[],"id":[],"options":[]},"width":672,"height":480,"buffer":{"accessors":[{"bufferView":0,"componentType":5126,"count":288,"type":"VEC3"},{"bufferView":1,"componentType":5121,"count":288,"type":"VEC4","normalized":true},{"bufferView":2,"componentType":5126,"count":288,"type":"VEC3"},{"bufferView":3,"componentType":5126,"count":1,"type":"VEC3"},{"bufferView":4,"componentType":5121,"count":1,"type":"VEC4"},{"bufferView":5,"componentType":5126,"count":1,"type":"VEC3"},{"bufferView":6,"componentType":5126,"count":1,"type":"VEC3"},{"bufferView":7,"componentType":5121,"count":1,"type":"VEC4"},{"bufferView":8,"componentType":5126,"count":1,"type":"VEC3"},{"bufferView":9,"componentType":5126,"count":1,"type":"VEC3"},{"bufferView":10,"componentType":5121,"count":1,"type":"VEC4"},{"bufferView":11,"componentType":5126,"count":1,"type":"VEC3"},{"bufferView":12,"componentType":5126,"count":1,"type":"VEC4"},{"bufferView":13,"componentType":5121,"count":1,"type":"VEC3"},{"bufferView":14,"componentType":5121,"count":1,"type":"VEC4"},{"bufferView":15,"componentType":5121,"count":1,"type":"VEC3"},{"bufferView":16,"componentType":5126,"count":14,"type":"VEC3"},{"bufferView":17,"componentType":5121,"count":1,"type":"VEC4"}],"bufferViews":[{"buffer":0,"byteLength":3456,"byteOffset":0},{"buffer":0,"byteLength":1152,"byteOffset":3456},{"buffer":0,"byteLength":3456,"byteOffset":4608},{"buffer":0,"byteLength":12,"byteOffset":8064},{"buffer":0,"byteLength":4,"byteOffset":8076},{"buffer":0,"byteLength":12,"byteOffset":8080},{"buffer":0,"byteLength":12,"byteOffset":8092},{"buffer":0,"byteLength":4,"byteOffset":8104},{"buffer":0,"byteLength":12,"byteOffset":8108},{"buffer":0,"byteLength":12,"byteOffset":8120},{"buffer":0,"byteLength":4,"byteOffset":8132},{"buffer":0,"byteLength":12,"byteOffset":8136},{"buffer":0,"byteLength":16,"byteOffset":8148},{"buffer":0,"byteLength":3,"byteOffset":8164},{"buffer":0,"byteLength":4,"byteOffset":8167},{"buffer":0,"byteLength":3,"byteOffset":8171},{"buffer":0,"byteLength":168,"byteOffset":8176},{"buffer":0,"byteLength":4,"byteOffset":8344}],"buffers":[{"byteLength":8348,"bytes":"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\n+kSFw4tFAIA7RAAA+kSFk5NFAAB6RAAA+kSFY5tFAECcRAAA+kSFM6NFAIC7RAAA+kSFA6tF\nAMDaRAAA+kSF07JFAAD6RAAA+kSFo7pFAEAcRQAA+kSFQ8pFACBLRQAA+kSFs+FFAAB6RQAA\n+kSFI/lFAECcRQAA+kSFI/lFAAB6QwBAHEWFk5NFAAD6QwBAHEWFY5tFAIA7RABAHEWFM6NF\nAAB6RABAHEWFA6tFAECcRABAHEWF07JFAIC7RABAHEWFo7pFAMDaRABAHEWFc8JFAAD6RABA\nHEWFQ8pFAEAcRQBAHEWF49lFACBLRQBAHEWFU/FFAAB6RQBAHEXDYQRGAECcRQBAHEXDYQRG\nAAB6QwAgS0WFA6tFAAD6QwAgS0WF07JFAIA7RAAgS0WFo7pFAAB6RAAgS0WFc8JFAECcRAAg\nS0WFQ8pFAIC7RAAgS0WFE9JFAMDaRAAgS0WF49lFAAD6RAAgS0WFs+FFAEAcRQAgS0WFU/FF\nACBLRQAgS0XDYQRGAAB6RQAgS0XDGRBGAECcRQAgS0XDGRBGAAB6QwAAekWFc8JFAAD6QwAA\nekWFQ8pFAIA7RAAAekWFE9JFAAB6RAAAekWF49lFAECcRAAAekWFs+FFAIC7RAAAekWFg+lF\nAMDaRAAAekWFU/FFAAD6RAAAekWFI/lFAEAcRQAAekXDYQRGACBLRQAAekXDGRBGAAB6RQAA\nekXD0RtGAECcRQAAekXD0RtGAAB6QwBAnEWFc8JFAAD6QwBAnEWFQ8pFAIA7RABAnEWFE9JF\nAAB6RABAnEWF49lFAECcRABAnEWFs+FFAIC7RABAnEWFg+lFAMDaRABAnEWFU/FFAAD6RABA\nnEWFI/lFAEAcRQBAnEXDYQRGACBLRQBAnEXDGRBGAAB6RQBAnEXD0RtGAECcRQBAnEXD0RtG\nSHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2\n//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//\nSHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2\n//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//\nSHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2\n//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//\nSHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2\n//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//\nSHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2\n//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv//\nSHb//0h2//9Idv//SHb//0h2//9Idv//SHb//0h2//9Idv///6UA//+lAP//pQD//6UA//+l\nAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD/\n/6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+l\nAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD/\n/6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+l\nAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD/\n/6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+l\nAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD/\n/6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+l\nAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD/\n/6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+lAP//pQD//6UA//+l\n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"}]},"context":{"shiny":false,"rmarkdown":null},"vertexShader":"#line 2 1\n// File 1 is the vertex shader\n#ifdef GL_ES\n#ifdef GL_FRAGMENT_PRECISION_HIGH\nprecision highp float;\n#else\nprecision mediump float;\n#endif\n#endif\n\nattribute vec3 aPos;\nattribute vec4 aCol;\nuniform mat4 mvMatrix;\nuniform mat4 prMatrix;\nvarying vec4 vCol;\nvarying vec4 vPosition;\n\n#ifdef NEEDS_VNORMAL\nattribute vec3 aNorm;\nuniform mat4 normMatrix;\nvarying vec4 vNormal;\n#endif\n\n#if defined(HAS_TEXTURE) || defined (IS_TEXT)\nattribute vec2 aTexcoord;\nvarying vec2 vTexcoord;\n#endif\n\n#ifdef FIXED_SIZE\nuniform vec3 textScale;\n#endif\n\n#ifdef FIXED_QUADS\nattribute vec3 aOfs;\n#endif\n\n#ifdef IS_TWOSIDED\n#ifdef HAS_NORMALS\nvarying float normz;\nuniform mat4 invPrMatrix;\n#else\nattribute vec3 aPos1;\nattribute vec3 aPos2;\nvarying float normz;\n#endif\n#endif // IS_TWOSIDED\n\n#ifdef FAT_LINES\nattribute vec3 aNext;\nattribute vec2 aPoint;\nvarying vec2 vPoint;\nvarying float vLength;\nuniform float uAspect;\nuniform float uLwd;\n#endif\n\n#ifdef USE_ENVMAP\nvarying vec3 vReflection;\n#endif\n\nvoid main(void) {\n  \n#ifndef IS_BRUSH\n#if defined(NCLIPPLANES) || !defined(FIXED_QUADS) || defined(HAS_FOG) || defined(USE_ENVMAP)\n  vPosition = mvMatrix * vec4(aPos, 1.);\n#endif\n  \n#ifndef FIXED_QUADS\n  gl_Position = prMatrix * vPosition;\n#endif\n#endif // !IS_BRUSH\n  \n#ifdef IS_POINTS\n  gl_PointSize = POINTSIZE;\n#endif\n  \n  vCol = aCol;\n  \n// USE_ENVMAP implies NEEDS_VNORMAL\n\n#ifdef NEEDS_VNORMAL\n  vNormal = normMatrix * vec4(-aNorm, dot(aNorm, aPos));\n#endif\n\n#ifdef USE_ENVMAP\n  vReflection = normalize(reflect(vPosition.xyz/vPosition.w, \n                        normalize(vNormal.xyz/vNormal.w)));\n#endif\n  \n#ifdef IS_TWOSIDED\n#ifdef HAS_NORMALS\n  /* normz should be calculated *after* projection */\n  normz = (invPrMatrix*vNormal).z;\n#else\n  vec4 pos1 = prMatrix*(mvMatrix*vec4(aPos1, 1.));\n  pos1 = pos1/pos1.w - gl_Position/gl_Position.w;\n  vec4 pos2 = prMatrix*(mvMatrix*vec4(aPos2, 1.));\n  pos2 = pos2/pos2.w - gl_Position/gl_Position.w;\n  normz = pos1.x*pos2.y - pos1.y*pos2.x;\n#endif\n#endif // IS_TWOSIDED\n  \n#ifdef NEEDS_VNORMAL\n  vNormal = vec4(normalize(vNormal.xyz/vNormal.w), 1);\n#endif\n  \n#if defined(HAS_TEXTURE) || defined(IS_TEXT)\n  vTexcoord = aTexcoord;\n#endif\n  \n#if defined(FIXED_SIZE) && !defined(ROTATING)\n  vec4 pos = prMatrix * mvMatrix * vec4(aPos, 1.);\n  pos = pos/pos.w;\n  gl_Position = pos + vec4(aOfs*textScale, 0.);\n#endif\n  \n#if defined(IS_SPRITES) && !defined(FIXED_SIZE)\n  vec4 pos = mvMatrix * vec4(aPos, 1.);\n  pos = pos/pos.w + vec4(aOfs,  0.);\n  gl_Position = prMatrix*pos;\n#endif\n  \n#ifdef FAT_LINES\n  /* This code was inspired by Matt Deslauriers' code in \n   https://mattdesl.svbtle.com/drawing-lines-is-hard */\n  vec2 aspectVec = vec2(uAspect, 1.0);\n  mat4 projViewModel = prMatrix * mvMatrix;\n  vec4 currentProjected = projViewModel * vec4(aPos, 1.0);\n  currentProjected = currentProjected/currentProjected.w;\n  vec4 nextProjected = projViewModel * vec4(aNext, 1.0);\n  vec2 currentScreen = currentProjected.xy * aspectVec;\n  vec2 nextScreen = (nextProjected.xy / nextProjected.w) * aspectVec;\n  float len = uLwd;\n  vec2 dir = vec2(1.0, 0.0);\n  vPoint = aPoint;\n  vLength = length(nextScreen - currentScreen)/2.0;\n  vLength = vLength/(vLength + len);\n  if (vLength > 0.0) {\n    dir = normalize(nextScreen - currentScreen);\n  }\n  vec2 normal = vec2(-dir.y, dir.x);\n  dir.x /= uAspect;\n  normal.x /= uAspect;\n  vec4 offset = vec4(len*(normal*aPoint.x*aPoint.y - dir), 0.0, 0.0);\n  gl_Position = currentProjected + offset;\n#endif\n  \n#ifdef IS_BRUSH\n  gl_Position = vec4(aPos, 1.);\n#endif\n}","fragmentShader":"#line 2 2\n// File 2 is the fragment shader\n#ifdef GL_ES\n#ifdef GL_FRAGMENT_PRECISION_HIGH\nprecision highp float;\n#else\nprecision mediump float;\n#endif\n#endif\nvarying vec4 vCol; // carries alpha\nvarying vec4 vPosition;\n#if defined(HAS_TEXTURE) || defined (IS_TEXT)\nvarying vec2 vTexcoord;\nuniform sampler2D uSampler;\n#endif\n\n#ifdef HAS_FOG\nuniform int uFogMode;\nuniform vec3 uFogColor;\nuniform vec4 uFogParms;\n#endif\n\n#if defined(IS_LIT) && !defined(FIXED_QUADS)\nvarying vec4 vNormal;\n#endif\n\n#if NCLIPPLANES > 0\nuniform vec4 vClipplane[NCLIPPLANES];\n#endif\n\n#if NLIGHTS > 0\nuniform mat4 mvMatrix;\n#endif\n\n#ifdef IS_LIT\nuniform vec3 emission;\nuniform float shininess;\n#if NLIGHTS > 0\nuniform vec3 ambient[NLIGHTS];\nuniform vec3 specular[NLIGHTS]; // light*material\nuniform vec3 diffuse[NLIGHTS];\nuniform vec3 lightDir[NLIGHTS];\nuniform bool viewpoint[NLIGHTS];\nuniform bool finite[NLIGHTS];\n#endif\n#endif // IS_LIT\n\n#ifdef IS_TWOSIDED\nuniform bool front;\nvarying float normz;\n#endif\n\n#ifdef FAT_LINES\nvarying vec2 vPoint;\nvarying float vLength;\n#endif\n\n#ifdef USE_ENVMAP\nvarying vec3 vReflection;\n#endif\n\nvoid main(void) {\n  vec4 fragColor;\n#ifdef FAT_LINES\n  vec2 point = vPoint;\n  bool neg = point.y < 0.0;\n  point.y = neg ? (point.y + vLength)/(1.0 - vLength) :\n                 -(point.y - vLength)/(1.0 - vLength);\n#if defined(IS_TRANSPARENT) && defined(IS_LINESTRIP)\n  if (neg && length(point) <= 1.0) discard;\n#endif\n  point.y = min(point.y, 0.0);\n  if (length(point) > 1.0) discard;\n#endif // FAT_LINES\n  \n#ifdef ROUND_POINTS\n  vec2 coord = gl_PointCoord - vec2(0.5);\n  if (length(coord) > 0.5) discard;\n#endif\n  \n#if NCLIPPLANES > 0\n  for (int i = 0; i < NCLIPPLANES; i++)\n    if (dot(vPosition, vClipplane[i]) < 0.0) discard;\n#endif\n    \n#ifdef FIXED_QUADS\n    vec3 n = vec3(0., 0., 1.);\n#elif defined(IS_LIT)\n    vec3 n = normalize(vNormal.xyz);\n#endif\n    \n#ifdef IS_TWOSIDED\n    if ((normz <= 0.) != front) discard;\n#endif\n\n#ifdef IS_LIT\n    vec3 eye = normalize(-vPosition.xyz/vPosition.w);\n    vec3 lightdir;\n    vec4 colDiff;\n    vec3 halfVec;\n    vec4 lighteffect = vec4(emission, 0.);\n    vec3 col;\n    float nDotL;\n#ifdef FIXED_QUADS\n    n = -faceforward(n, n, eye);\n#endif\n    \n#if NLIGHTS > 0\n    for (int i=0;i<NLIGHTS;i++) {\n      colDiff = vec4(vCol.rgb * diffuse[i], vCol.a);\n      lightdir = lightDir[i];\n      if (!viewpoint[i])\n        lightdir = (mvMatrix * vec4(lightdir, 1.)).xyz;\n      if (!finite[i]) {\n        halfVec = normalize(lightdir + eye);\n      } else {\n        lightdir = normalize(lightdir - vPosition.xyz/vPosition.w);\n        halfVec = normalize(lightdir + eye);\n      }\n      col = ambient[i];\n      nDotL = dot(n, lightdir);\n      col = col + max(nDotL, 0.) * colDiff.rgb;\n      col = col + pow(max(dot(halfVec, n), 0.), shininess) * specular[i];\n      lighteffect = lighteffect + vec4(col, colDiff.a);\n    }\n#endif\n    \n#else // not IS_LIT\n    vec4 colDiff = vCol;\n    vec4 lighteffect = colDiff;\n#endif\n    \n#ifdef IS_TEXT\n    vec4 textureColor = lighteffect*texture2D(uSampler, vTexcoord);\n#endif\n    \n#ifdef HAS_TEXTURE\n\n// These calculations use the definitions from \n// https://docs.gl/gl3/glTexEnv\n\n#ifdef USE_ENVMAP\n    float m = 2.0 * sqrt(dot(vReflection, vReflection) + 2.0*vReflection.z + 1.0);\n    vec4 textureColor = texture2D(uSampler, vReflection.xy / m + vec2(0.5, 0.5));\n#else\n    vec4 textureColor = texture2D(uSampler, vTexcoord);\n#endif\n\n#ifdef TEXTURE_rgb\n\n#if defined(TEXMODE_replace) || defined(TEXMODE_decal)\n    textureColor = vec4(textureColor.rgb, lighteffect.a);\n#endif \n\n#ifdef TEXMODE_modulate\n    textureColor = lighteffect*vec4(textureColor.rgb, 1.);\n#endif\n\n#ifdef TEXMODE_blend\n    textureColor = vec4((1. - textureColor.rgb) * lighteffect.rgb, lighteffect.a);\n#endif\n\n#ifdef TEXMODE_add\n    textureColor = vec4(lighteffect.rgb + textureColor.rgb, lighteffect.a);\n#endif\n\n#endif //TEXTURE_rgb\n        \n#ifdef TEXTURE_rgba\n\n#ifdef TEXMODE_replace\n// already done\n#endif \n\n#ifdef TEXMODE_modulate\n    textureColor = lighteffect*textureColor;\n#endif\n\n#ifdef TEXMODE_decal\n    textureColor = vec4((1. - textureColor.a)*lighteffect.rgb) +\n                     textureColor.a*textureColor.rgb, \n                     lighteffect.a);\n#endif\n\n#ifdef TEXMODE_blend\n    textureColor = vec4((1. - textureColor.rgb) * lighteffect.rgb,\n                    lighteffect.a*textureColor.a);\n#endif\n\n#ifdef TEXMODE_add\n    textureColor = vec4(lighteffect.rgb + textureColor.rgb,\n                    lighteffect.a*textureColor.a);\n#endif\n    \n#endif //TEXTURE_rgba\n    \n#ifdef TEXTURE_alpha\n#if defined(TEXMODE_replace) || defined(TEXMODE_decal)\n    textureColor = vec4(lighteffect.rgb, textureColor.a);\n#endif \n\n#if defined(TEXMODE_modulate) || defined(TEXMODE_blend) || defined(TEXMODE_add)\n    textureColor = vec4(lighteffect.rgb, lighteffect.a*textureColor.a);\n#endif\n \n#endif\n    \n// The TEXTURE_luminance values are not from that reference    \n#ifdef TEXTURE_luminance\n    float luminance = dot(vec3(1.,1.,1.),textureColor.rgb)/3.;\n\n#if defined(TEXMODE_replace) || defined(TEXMODE_decal)\n    textureColor = vec4(luminance, luminance, luminance, lighteffect.a);\n#endif \n\n#ifdef TEXMODE_modulate\n    textureColor = vec4(luminance*lighteffect.rgb, lighteffect.a);\n#endif\n\n#ifdef TEXMODE_blend\n    textureColor = vec4((1. - luminance)*lighteffect.rgb,\n                        lighteffect.a);\n#endif\n\n#ifdef TEXMODE_add\n    textureColor = vec4(luminance + lighteffect.rgb, lighteffect.a);\n#endif\n\n#endif // TEXTURE_luminance\n \n    \n#ifdef TEXTURE_luminance_alpha\n    float luminance = dot(vec3(1.,1.,1.),textureColor.rgb)/3.;\n\n#if defined(TEXMODE_replace) || defined(TEXMODE_decal)\n    textureColor = vec4(luminance, luminance, luminance, textureColor.a);\n#endif \n\n#ifdef TEXMODE_modulate\n    textureColor = vec4(luminance*lighteffect.rgb, \n                        textureColor.a*lighteffect.a);\n#endif\n\n#ifdef TEXMODE_blend\n    textureColor = vec4((1. - luminance)*lighteffect.rgb,\n                        textureColor.a*lighteffect.a);\n#endif\n\n#ifdef TEXMODE_add\n    textureColor = vec4(luminance + lighteffect.rgb, \n                        textureColor.a*lighteffect.a);\n\n#endif\n\n#endif // TEXTURE_luminance_alpha\n    \n    fragColor = textureColor;\n\n#elif defined(IS_TEXT)\n    if (textureColor.a < 0.1)\n      discard;\n    else\n      fragColor = textureColor;\n#else\n    fragColor = lighteffect;\n#endif // HAS_TEXTURE\n    \n#ifdef HAS_FOG\n    // uFogParms elements: x = near, y = far, z = fogscale, w = (1-sin(FOV/2))/(1+sin(FOV/2))\n    // In Exp and Exp2: use density = density/far\n    // fogF will be the proportion of fog\n    // Initialize it to the linear value\n    float fogF;\n    if (uFogMode > 0) {\n      fogF = (uFogParms.y - vPosition.z/vPosition.w)/(uFogParms.y - uFogParms.x);\n      if (uFogMode > 1)\n        fogF = mix(uFogParms.w, 1.0, fogF);\n      fogF = fogF*uFogParms.z;\n      if (uFogMode == 2)\n        fogF = 1.0 - exp(-fogF);\n      // Docs are wrong: use (density*c)^2, not density*c^2\n      // https://gitlab.freedesktop.org/mesa/mesa/-/blob/master/src/mesa/swrast/s_fog.c#L58\n      else if (uFogMode == 3)\n        fogF = 1.0 - exp(-fogF*fogF);\n      fogF = clamp(fogF, 0.0, 1.0);\n      gl_FragColor = vec4(mix(fragColor.rgb, uFogColor, fogF), fragColor.a);\n    } else gl_FragColor = fragColor;\n#else\n    gl_FragColor = fragColor;\n#endif // HAS_FOG\n    \n}","players":[],"webGLoptions":{"preserveDrawingBuffer":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="healthinsurancecomp_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
